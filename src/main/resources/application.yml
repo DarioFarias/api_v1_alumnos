@@ -1,0 +1,15 @@
+#1. Establecemos conexion a la BD H2 (URL, Username y Password)
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+  jpa: # JPA = Java Persistence API, ESPECIFICACIÓN de alto nivel para persistencia de Datos
+    hibernate: # Hibernate es un ORM (Object Relational Mapping) que transforma OBJETOS java en TABLAS en SQL.
+      ddl-auto: update # ddl =Data Definition Language
+  output:
+    ansi: # pinta la consola con colores ANSI
+      enabled: always
+  h2: # Base de Datos Relacional en memoria y embebida
+    console:
+      enabled: true # para consultar la BD ir a http://localhost:8080/h2-console/
